@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>NightForge — weekly digest 20260831</title><style>
+:root{color-scheme:light dark;--fg:#1d2230;--bg:#fff;--mut:#6b7280;--line:#8884;--acc:#2563eb}
+@media(prefers-color-scheme:dark){:root{--fg:#e5e7eb;--bg:#0f1115;--mut:#9ca3af}}
+*{box-sizing:border-box}body{margin:0;padding:1rem;font:16px/1.5 system-ui,sans-serif;
+color:var(--fg);background:var(--bg);max-width:44rem;margin-inline:auto}
+a{color:var(--acc)}h1{font-size:1.4rem}h2{font-size:1.15rem;margin-top:1.6rem}
+h3{font-size:1rem}code{font-size:.9em;background:#8882;padding:0 .25em;border-radius:3px}
+.tw{overflow-x:auto}table{border-collapse:collapse;font-size:.9rem;white-space:nowrap}
+td,th{border:1px solid var(--line);padding:.3rem .5rem;text-align:left}
+blockquote{border-left:3px solid var(--line);margin:1rem 0;padding:.2rem .8rem;color:var(--mut)}
+nav{font-size:.9rem;margin-bottom:1rem}.mut{color:var(--mut);font-size:.85rem}
+ul.idx{list-style:none;padding:0}ul.idx li{padding:.5rem 0;border-bottom:1px solid var(--line)}
+</style></head>
+<body><nav><a href='../index.html'>&larr; all reports</a> &middot; <a href='20260831.md'>markdown</a></nav>
+<section style="font-family:system-ui;max-width:34rem;border:1px solid #8884;
+border-radius:8px;padding:1rem;margin:1rem 0">
+<h3 style="margin-top:0">NightForge — weekly digest</h3>
+<table style="border-collapse:collapse"><tr><td>window</td><td>last 7 days</td></tr><tr><td>trials</td><td>408</td></tr><tr><td>gate-passers</td><td>85</td></tr><tr><td>nights run</td><td>7</td></tr><tr><td>stress grads / fails</td><td>0 / 3</td></tr><tr><td>LLM spend</td><td>6 calls / 37664 tokens / est $1.23</td></tr></table>
+<h4>family trend</h4>
+<table style="border-collapse:collapse">
+<tr><th>family</th><th>window mean</th><th>trend</th></tr><tr><td>hypo_uphit_persistence_carry</td><td>+0.944</td><td>rising</td></tr><tr><td>hypo_efficiency_ratio_trend_ride</td><td>+0.345</td><td>rising</td></tr><tr><td>hypo_flow_divergence_accumulation</td><td>-0.097</td><td>new</td></tr></table>
+</section>
+<h1>NightForge — Weekly Digest (last 7 days)</h1>
+<p><em>generated 2026-08-31T06:10Z; window since 2026-08-24</em></p>
+<ul><li>trials: <strong>408</strong> | gate-passers: <strong>85</strong> | nights run: <strong>7</strong></li><li>funnel: hypotheses 2 accepted / 4 rejected; stress 0 graduated / 3 failed</li><li>LLM spend (window): 6 calls, 16277 in / 21387 out, est <strong>$1.23</strong> (lifetime est $10.10)</li></ul>
+<h2>Family trend (population-mean OOS, window vs prior)</h2>
+<div class='tw'><table><tr><th>family</th><th>nights evolved</th><th>window mean</th><th>prior mean</th><th>trend</th></tr><tr><td><code>hypo_uphit_persistence_carry</code></td><td>10</td><td>+0.944</td><td>+0.449</td><td>rising</td></tr><tr><td><code>hypo_efficiency_ratio_trend_ride</code></td><td>2</td><td>+0.345</td><td>-0.136</td><td>rising</td></tr><tr><td><code>hypo_flow_divergence_accumulation</code></td><td>1</td><td>-0.097</td><td>—</td><td>new</td></tr></table></div>
+<h2>Paper run</h2>
+<h3><code>hypo_turn_of_month_trend_gate</code> / <code>6d5a8da93b</code></h3>
+<div class='tw'><table><tr><th>symbol</th><th>days/30</th><th>exposure</th><th>PnL 1x</th><th>PnL 3x</th><th>maxDD</th><th>corr</th><th>TE(d)</th><th>degraded</th></tr><tr><td>BTC/USDT</td><td>10.8/30</td><td>0 bars (0%)</td><td>+0.00%</td><td>+0.00%</td><td>+0.00%</td><td>—</td><td>0.0</td><td>no</td></tr><tr><td>ETH/USDT</td><td>10.8/30</td><td>0 bars (0%)</td><td>+0.00%</td><td>+0.00%</td><td>+0.00%</td><td>—</td><td>0.0</td><td>no</td></tr></table></div>
+<h2>Design principles</h2>
+<ul><li>EXPERIMENT hard-window vs soft-gate (cycle4, controlled prompt, 14 mutants each): population mean OOS sortino hard -0.56 vs soft -1.37; only BTC gate-passer was hard_window; exploratory stress best-of-type: hard 2/5 vs soft 2/5. Direction favors HARD calendar windows, but no dual-symbol survivor reached the real stress gate — principle PROVISIONAL, not proven.</li></ul>
+<h2>Nights in this window</h2>
+<ul><li>night 7 (20260824): family=hypo_uphit_persistence_carry, gates=24, graduates=0, spend=2c/12706t</li><li>night 8 (20260825): family=hypo_uphit_persistence_carry, gates=25, graduates=0, spend=0c/0t</li><li>night 9 (20260826): family=hypo_uphit_persistence_carry, gates=21, graduates=0, spend=0c/0t</li><li>night 10 (20260827): family=hypo_uphit_persistence_carry, gates=13, graduates=0, spend=2c/12846t</li><li>night 11 (20260828): family=hypo_efficiency_ratio_trend_ride, gates=0, graduates=0, [redacted], spend=0c/0t</li><li>night 12 (20260829): family=hypo_flow_divergence_accumulation, gates=2, graduates=0, [redacted], spend=0c/0t</li><li>night 13 (20260830): family=hypo_efficiency_ratio_trend_ride, gates=0, graduates=0, [redacted], spend=2c/12112t</li></ul>
+</body></html>
