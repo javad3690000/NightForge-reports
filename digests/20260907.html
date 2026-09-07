@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>NightForge — weekly digest 20260907</title><style>
+:root{color-scheme:light dark;--fg:#1d2230;--bg:#fff;--mut:#6b7280;--line:#8884;--acc:#2563eb}
+@media(prefers-color-scheme:dark){:root{--fg:#e5e7eb;--bg:#0f1115;--mut:#9ca3af}}
+*{box-sizing:border-box}body{margin:0;padding:1rem;font:16px/1.5 system-ui,sans-serif;
+color:var(--fg);background:var(--bg);max-width:44rem;margin-inline:auto}
+a{color:var(--acc)}h1{font-size:1.4rem}h2{font-size:1.15rem;margin-top:1.6rem}
+h3{font-size:1rem}code{font-size:.9em;background:#8882;padding:0 .25em;border-radius:3px}
+.tw{overflow-x:auto}table{border-collapse:collapse;font-size:.9rem;white-space:nowrap}
+td,th{border:1px solid var(--line);padding:.3rem .5rem;text-align:left}
+blockquote{border-left:3px solid var(--line);margin:1rem 0;padding:.2rem .8rem;color:var(--mut)}
+nav{font-size:.9rem;margin-bottom:1rem}.mut{color:var(--mut);font-size:.85rem}
+ul.idx{list-style:none;padding:0}ul.idx li{padding:.5rem 0;border-bottom:1px solid var(--line)}
+</style></head>
+<body><nav><a href='../index.html'>&larr; all reports</a> &middot; <a href='20260907.md'>markdown</a></nav>
+<section style="font-family:system-ui;max-width:34rem;border:1px solid #8884;
+border-radius:8px;padding:1rem;margin:1rem 0">
+<h3 style="margin-top:0">NightForge — weekly digest</h3>
+<table style="border-collapse:collapse"><tr><td>window</td><td>last 7 days</td></tr><tr><td>trials</td><td>397</td></tr><tr><td>gate-passers</td><td>2</td></tr><tr><td>nights run</td><td>7</td></tr><tr><td>stress grads / fails</td><td>0 / 0</td></tr><tr><td>LLM spend</td><td>4 calls / 24514 tokens / est $0.71</td></tr></table>
+<h4>family trend</h4>
+<table style="border-collapse:collapse">
+<tr><th>family</th><th>window mean</th><th>trend</th></tr><tr><td>hypo_efficiency_ratio_trend_ride</td><td>+0.347</td><td>rising</td></tr><tr><td>hypo_clv_volume_pressure_carry</td><td>-0.091</td><td>new</td></tr><tr><td>hypo_flow_divergence_accumulation</td><td>-0.122</td><td>flat</td></tr><tr><td>hypo_dd_recovery_reclaim</td><td>-0.508</td><td>new</td></tr><tr><td>hypo_price_impact_trend_gate</td><td>-2.235</td><td>new</td></tr></table>
+</section>
+<h1>NightForge — Weekly Digest (last 7 days)</h1>
+<p><em>generated 2026-09-07T06:10Z; window since 2026-08-31</em></p>
+<ul><li>trials: <strong>397</strong> | gate-passers: <strong>2</strong> | nights run: <strong>7</strong></li><li>funnel: hypotheses 4 accepted / 0 rejected; stress 0 graduated / 0 failed</li><li>LLM spend (window): 4 calls, 12788 in / 11726 out, est <strong>$0.71</strong> (lifetime est $10.82)</li></ul>
+<h2>Family trend (population-mean OOS, window vs prior)</h2>
+<div class='tw'><table><tr><th>family</th><th>nights evolved</th><th>window mean</th><th>prior mean</th><th>trend</th></tr><tr><td><code>hypo_efficiency_ratio_trend_ride</code></td><td>6</td><td>+0.347</td><td>+0.123</td><td>rising</td></tr><tr><td><code>hypo_clv_volume_pressure_carry</code></td><td>0</td><td>-0.091</td><td>—</td><td>new</td></tr><tr><td><code>hypo_flow_divergence_accumulation</code></td><td>2</td><td>-0.122</td><td>-0.097</td><td>flat</td></tr><tr><td><code>hypo_dd_recovery_reclaim</code></td><td>1</td><td>-0.508</td><td>—</td><td>new</td></tr><tr><td><code>hypo_price_impact_trend_gate</code></td><td>1</td><td>-2.235</td><td>—</td><td>new</td></tr></table></div>
+<h2>Paper run</h2>
+<h3><code>hypo_turn_of_month_trend_gate</code> / <code>6d5a8da93b</code></h3>
+<div class='tw'><table><tr><th>symbol</th><th>days/30</th><th>exposure</th><th>PnL 1x</th><th>PnL 3x</th><th>maxDD</th><th>corr</th><th>TE(d)</th><th>degraded</th></tr><tr><td>BTC/USDT</td><td>17.8/30</td><td>49 bars (11%)</td><td>-2.21%</td><td>-3.19%</td><td>-3.44%</td><td>1.0</td><td>0.0</td><td>no</td></tr><tr><td>ETH/USDT</td><td>17.8/30</td><td>43 bars (10%)</td><td>-5.42%</td><td>-6.54%</td><td>-5.53%</td><td>1.0</td><td>0.0</td><td>no</td></tr></table></div>
+<h2>Design principles</h2>
+<ul><li>EXPERIMENT hard-window vs soft-gate (cycle4, controlled prompt, 14 mutants each): population mean OOS sortino hard -0.56 vs soft -1.37; only BTC gate-passer was hard_window; exploratory stress best-of-type: hard 2/5 vs soft 2/5. Direction favors HARD calendar windows, but no dual-symbol survivor reached the real stress gate — principle PROVISIONAL, not proven.</li></ul>
+<h2>Nights in this window</h2>
+<ul><li>night 14 (20260831): family=hypo_efficiency_ratio_trend_ride, gates=0, graduates=0, [redacted], spend=0c/0t</li><li>night 15 (20260901): family=hypo_price_impact_trend_gate, gates=0, graduates=0, [redacted], spend=0c/0t</li><li>night 16 (20260902): family=hypo_flow_divergence_accumulation, gates=2, graduates=0, [redacted], spend=2c/12628t</li><li>night 17 (20260903): family=hypo_efficiency_ratio_trend_ride, gates=0, graduates=0, [redacted], spend=0c/0t</li><li>night 18 (20260904): family=hypo_dd_recovery_reclaim, gates=0, graduates=0, [redacted], spend=0c/0t</li><li>night 19 (20260905): family=hypo_efficiency_ratio_trend_ride, gates=0, graduates=0, [redacted], spend=2c/11886t</li><li>night 20 (20260906): family=hypo_efficiency_ratio_trend_ride, gates=0, graduates=0, [redacted], spend=0c/0t</li></ul>
+</body></html>
